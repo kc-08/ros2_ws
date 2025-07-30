@@ -1,4 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000088] (-) JobUnselected: {'identifier': 'fizzbuzz'}
-[0.000105] (-) JobUnselected: {'identifier': 'fizzbuzz_interfaces'}
-[0.000114] (-) EventReactorShutdown: {}
