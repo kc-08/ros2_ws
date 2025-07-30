@@ -1,0 +1,26 @@
+[1.762s] Invoking command in '/home/kailync/ros2_ws/src/line_path': PYTHONPATH=/home/kailync/ros2_ws/build/line_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/line_path build --build-base /home/kailync/ros2_ws/build/line_path/build install --record /home/kailync/ros2_ws/build/line_path/install.log --single-version-externally-managed install_data
+[1.963s] running egg_info
+[1.963s] writing ../../build/line_path/line_path.egg-info/PKG-INFO
+[1.965s] writing dependency_links to ../../build/line_path/line_path.egg-info/dependency_links.txt
+[1.965s] writing entry points to ../../build/line_path/line_path.egg-info/entry_points.txt
+[1.965s] writing requirements to ../../build/line_path/line_path.egg-info/requires.txt
+[1.965s] writing top-level names to ../../build/line_path/line_path.egg-info/top_level.txt
+[1.967s] reading manifest file '../../build/line_path/line_path.egg-info/SOURCES.txt'
+[1.972s] writing manifest file '../../build/line_path/line_path.egg-info/SOURCES.txt'
+[1.972s] running build
+[1.972s] running build_py
+[1.976s] copying line_path/line_tracker_node.py -> /home/kailync/ros2_ws/build/line_path/build/lib/line_path
+[1.977s] copying line_path/line_follower_node.py -> /home/kailync/ros2_ws/build/line_path/build/lib/line_path
+[1.978s] running install
+[1.978s] running install_lib
+[1.980s] copying /home/kailync/ros2_ws/build/line_path/build/lib/line_path/line_tracker_node.py -> /home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path
+[1.980s] copying /home/kailync/ros2_ws/build/line_path/build/lib/line_path/line_follower_node.py -> /home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path
+[1.981s] byte-compiling /home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path/line_tracker_node.py to line_tracker_node.cpython-310.pyc
+[1.983s] byte-compiling /home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path/line_follower_node.py to line_follower_node.cpython-310.pyc
+[1.983s] running install_data
+[1.983s] running install_egg_info
+[1.985s] removing '/home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path-0.0.0-py3.10.egg-info' (and everything under it)
+[1.985s] Copying ../../build/line_path/line_path.egg-info to /home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages/line_path-0.0.0-py3.10.egg-info
+[1.987s] running install_scripts
+[2.006s] writing list of installed files to '/home/kailync/ros2_ws/build/line_path/install.log'
+[2.040s] Invoked command in '/home/kailync/ros2_ws/src/line_path' returned '0': PYTHONPATH=/home/kailync/ros2_ws/build/line_path/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/line_path/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/line_path build --build-base /home/kailync/ros2_ws/build/line_path/build install --record /home/kailync/ros2_ws/build/line_path/install.log --single-version-externally-managed install_data

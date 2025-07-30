@@ -1,0 +1,20 @@
+[2.090s] Invoking command in '/home/kailync/ros2_ws/src/ar_tag': PYTHONPATH=/home/kailync/ros2_ws/build/ar_tag/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/ar_tag/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ar_tag build --build-base /home/kailync/ros2_ws/build/ar_tag/build install --record /home/kailync/ros2_ws/build/ar_tag/install.log --single-version-externally-managed install_data
+[2.329s] running egg_info
+[2.330s] writing ../../build/ar_tag/ar_tag.egg-info/PKG-INFO
+[2.331s] writing dependency_links to ../../build/ar_tag/ar_tag.egg-info/dependency_links.txt
+[2.331s] writing entry points to ../../build/ar_tag/ar_tag.egg-info/entry_points.txt
+[2.332s] writing requirements to ../../build/ar_tag/ar_tag.egg-info/requires.txt
+[2.333s] writing top-level names to ../../build/ar_tag/ar_tag.egg-info/top_level.txt
+[2.334s] reading manifest file '../../build/ar_tag/ar_tag.egg-info/SOURCES.txt'
+[2.337s] writing manifest file '../../build/ar_tag/ar_tag.egg-info/SOURCES.txt'
+[2.337s] running build
+[2.337s] running build_py
+[2.340s] running install
+[2.340s] running install_lib
+[2.341s] running install_data
+[2.343s] running install_egg_info
+[2.345s] removing '/home/kailync/ros2_ws/install/ar_tag/lib/python3.10/site-packages/ar_tag-0.0.0-py3.10.egg-info' (and everything under it)
+[2.345s] Copying ../../build/ar_tag/ar_tag.egg-info to /home/kailync/ros2_ws/install/ar_tag/lib/python3.10/site-packages/ar_tag-0.0.0-py3.10.egg-info
+[2.348s] running install_scripts
+[2.370s] writing list of installed files to '/home/kailync/ros2_ws/build/ar_tag/install.log'
+[2.479s] Invoked command in '/home/kailync/ros2_ws/src/ar_tag' returned '0': PYTHONPATH=/home/kailync/ros2_ws/build/ar_tag/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/ar_tag/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ar_tag build --build-base /home/kailync/ros2_ws/build/ar_tag/build install --record /home/kailync/ros2_ws/build/ar_tag/install.log --single-version-externally-managed install_data

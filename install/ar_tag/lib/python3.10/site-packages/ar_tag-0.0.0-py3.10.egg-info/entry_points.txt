@@ -1,0 +1,3 @@
+[console_scripts]
+tag_test_node = ar_tag.tag_test_node:main
+

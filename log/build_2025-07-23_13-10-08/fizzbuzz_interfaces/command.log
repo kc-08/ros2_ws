@@ -1,0 +1,2 @@
+Invoking command in '/home/kailync/ros2_ws/build/fizzbuzz_interfaces': /usr/bin/cmake --build /home/kailync/ros2_ws/build/fizzbuzz_interfaces -- -j6 -l6
+Invoked command in '/home/kailync/ros2_ws/build/fizzbuzz_interfaces' returned '2': /usr/bin/cmake --build /home/kailync/ros2_ws/build/fizzbuzz_interfaces -- -j6 -l6

@@ -1,0 +1,3 @@
+source;share/ar_tag/hook/pythonpath.ps1
+source;share/ar_tag/hook/pythonpath.dsv
+source;share/ar_tag/hook/pythonpath.sh

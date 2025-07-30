@@ -1,0 +1,33 @@
+[0.334s] Invoking command in '/home/kailync/ros2_ws/src/fizzbuzz': PYTHONPATH=/home/kailync/ros2_ws/build/fizzbuzz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fizzbuzz build --build-base /home/kailync/ros2_ws/build/fizzbuzz/build install --record /home/kailync/ros2_ws/build/fizzbuzz/install.log --single-version-externally-managed install_data
+[0.452s] running egg_info
+[0.452s] creating ../../build/fizzbuzz/fizzbuzz.egg-info
+[0.452s] writing ../../build/fizzbuzz/fizzbuzz.egg-info/PKG-INFO
+[0.452s] writing dependency_links to ../../build/fizzbuzz/fizzbuzz.egg-info/dependency_links.txt
+[0.453s] writing entry points to ../../build/fizzbuzz/fizzbuzz.egg-info/entry_points.txt
+[0.453s] writing requirements to ../../build/fizzbuzz/fizzbuzz.egg-info/requires.txt
+[0.453s] writing top-level names to ../../build/fizzbuzz/fizzbuzz.egg-info/top_level.txt
+[0.453s] writing manifest file '../../build/fizzbuzz/fizzbuzz.egg-info/SOURCES.txt'
+[0.453s] reading manifest file '../../build/fizzbuzz/fizzbuzz.egg-info/SOURCES.txt'
+[0.454s] writing manifest file '../../build/fizzbuzz/fizzbuzz.egg-info/SOURCES.txt'
+[0.454s] running build
+[0.454s] running build_py
+[0.454s] creating /home/kailync/ros2_ws/build/fizzbuzz/build
+[0.454s] creating /home/kailync/ros2_ws/build/fizzbuzz/build/lib
+[0.454s] creating /home/kailync/ros2_ws/build/fizzbuzz/build/lib/fizzbuzz
+[0.454s] copying fizzbuzz/__init__.py -> /home/kailync/ros2_ws/build/fizzbuzz/build/lib/fizzbuzz
+[0.454s] running install
+[0.454s] running install_lib
+[0.455s] creating /home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages/fizzbuzz
+[0.455s] copying /home/kailync/ros2_ws/build/fizzbuzz/build/lib/fizzbuzz/__init__.py -> /home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages/fizzbuzz
+[0.455s] byte-compiling /home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages/fizzbuzz/__init__.py to __init__.cpython-310.pyc
+[0.455s] running install_data
+[0.455s] creating /home/kailync/ros2_ws/install/fizzbuzz/share/ament_index
+[0.455s] creating /home/kailync/ros2_ws/install/fizzbuzz/share/ament_index/resource_index
+[0.456s] creating /home/kailync/ros2_ws/install/fizzbuzz/share/ament_index/resource_index/packages
+[0.456s] copying resource/fizzbuzz -> /home/kailync/ros2_ws/install/fizzbuzz/share/ament_index/resource_index/packages
+[0.456s] copying package.xml -> /home/kailync/ros2_ws/install/fizzbuzz/share/fizzbuzz
+[0.456s] running install_egg_info
+[0.457s] Copying ../../build/fizzbuzz/fizzbuzz.egg-info to /home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages/fizzbuzz-0.0.0-py3.10.egg-info
+[0.457s] running install_scripts
+[0.468s] writing list of installed files to '/home/kailync/ros2_ws/build/fizzbuzz/install.log'
+[0.483s] Invoked command in '/home/kailync/ros2_ws/src/fizzbuzz' returned '0': PYTHONPATH=/home/kailync/ros2_ws/build/fizzbuzz/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/kailync/ros2_ws/install/fizzbuzz/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fizzbuzz build --build-base /home/kailync/ros2_ws/build/fizzbuzz/build install --record /home/kailync/ros2_ws/build/fizzbuzz/install.log --single-version-externally-managed install_data

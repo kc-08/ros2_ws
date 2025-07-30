@@ -1,0 +1,36 @@
+[0.161s] Invoking command in '/home/kailync/ros2_ws/build/fizzbuzz_interfaces': /usr/bin/cmake --build /home/kailync/ros2_ws/build/fizzbuzz_interfaces -- -j6 -l6
+[0.212s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.301s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.302s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.304s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.331s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.459s] Error parsing '/home/kailync/ros2_ws/src/fizzbuzz_interfaces/package.xml':
+[0.488s] Traceback (most recent call last):
+[0.488s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[0.488s]     main()
+[0.488s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[0.488s]     raise e
+[0.488s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[0.488s]     package = parse_package_string(
+[0.488s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string
+[0.489s]     pkg.validate(warnings=warnings)
+[0.489s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate
+[0.489s]     raise InvalidPackage('\n'.join(errors), self.filename)
+[0.489s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/kailync/ros2_ws/src/fizzbuzz_interfaces/package.xml':
+[0.489s] The package "fizzbuzz_interfaces" must not "exec_depend" on a package with the same name as this package
+[0.498s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[0.499s]   execute_process(/usr/bin/python3
+[0.499s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.499s]   /home/kailync/ros2_ws/src/fizzbuzz_interfaces/package.xml
+[0.499s]   /home/kailync/ros2_ws/build/fizzbuzz_interfaces/ament_cmake_core/package.cmake)
+[0.499s]   returned error code 1
+[0.499s] Call Stack (most recent call first):
+[0.499s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.499s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+[0.499s]   CMakeLists.txt:15 (rosidl_generate_interfaces)
+[0.499s] 
+[0.499s] [0m
+[0.499s] -- Configuring incomplete, errors occurred!
+[0.499s] See also "/home/kailync/ros2_ws/build/fizzbuzz_interfaces/CMakeFiles/CMakeOutput.log".
+[0.503s] gmake: *** [Makefile:747: cmake_check_build_system] Error 1
+[0.505s] Invoked command in '/home/kailync/ros2_ws/build/fizzbuzz_interfaces' returned '2': /usr/bin/cmake --build /home/kailync/ros2_ws/build/fizzbuzz_interfaces -- -j6 -l6
