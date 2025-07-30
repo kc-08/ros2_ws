@@ -2,8 +2,8 @@ import rclpy
 from rclpy.node import Node 
 import numpy as np
 import cv2
-from std_msgs.msg import Int32
-from geometry_msgs.msg import Pose
+from std_msgs.msg import String
+from geometry_msgs.msg import PoseStamped
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import TrajectorySetpoint
 
@@ -16,24 +16,22 @@ class ObstacleNode(Node):
         self.ARCH_LENGTH = 1.0
         self.KP_Z = 0.02
         super().__init__('Obstacle_avoider')
-        self.tags = {} #ct = circle top; cb = circle bottom; cl = circle left; cr = circle right; b = banner; al = arch left; ar = arch left; at = arch top
+        self.tags = {98:'ct', 94: 'cl'} #ct = circle top; cb = circle bottom; cl = circle left; cr = circle right; b = banner; al = arch left; ar = arch left; at = arch top
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
             history=HistoryPolicy.KEEP_LAST,
             depth=1
         )
-        self.id_sub = self.create_subscription(Int32, '/camera/detected_tag_id', self.tag_callback, 10)
-        self.pose_sub = self.create_subscription(Pose, '/mavros/local_position/pose', self.pose_callback, 10)
+        # self.id_sub = self.create_subscription(Int32, '/camera/detected_tag_id', self.tag_callback, 10)
+        self.pose_sub = self.create_subscription(PoseStamped, '/mavros/local_position/pose', self.pose_callback, 10)
         self.vel_pub = self.create_publisher(TrajectorySetpoint, '/velocity', qos_profile)
 
-    def pose_callback(self, msg):
+    def pose_callback(self,msg):
         self.y = msg.x
         self.z = msg.y
         self.x = msg.z
-
-    def tag_callback(self,msg):
-        tag_id = msg.data
+        tag_id = msg.header
         r = self.CIRCLE_RADIUS
         bh = self.BANNER_HEIGHT
         ah = self.ARCH_HEIGHT
