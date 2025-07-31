@@ -11,11 +11,15 @@ class ObstacleNode(Node):
     def __init__(self):
         super().__init__('Obstacle_avoider')
         #Constants
-        self.CIRCLE_RADIUS = 0.5
-        self.BANNER_HEIGHT = 0.5
-        self.ARCH_HEIGHT = 0.5
-        self.ARCH_LENGTH = 1.0
-        self.KP_Z = 0.02
+        self.CIRCLE_RADIUS = 1.101725
+        self.BANNER_OUTER_HEIGHT = 1.16332
+        self.BANNER_THICKNESS = 0.52705
+        self.ARCH_INNER_HEIGHT = 1.84531
+        self.ARCH_OUTER_HEIGHT = 2.14503
+        self.ARCH_THICKNESS = self.ARCH_OUTER_HEIGHT - self.ARCH_INNER_HEIGHT
+        self.ARCH_LENGTH = 2.11709
+        self.KP_Z = 0.2
+
 
         #TEST VALUES NOT CORRECT
         self.tags = {98:'ct', 94: 'cl'} #ct = circle top; cb = circle bottom; cl = circle left; cr = circle right; b = banner; al = arch left; ar = arch left; at = arch top
@@ -34,18 +38,18 @@ class ObstacleNode(Node):
         self.x = msg.pose.position.z
         tag_id = int(msg.header.frame_id)
         r = self.CIRCLE_RADIUS
-        bh = self.BANNER_HEIGHT
-        ah = self.ARCH_HEIGHT
+        bh = self.BANNER_OUTER_HEIGHT
+        ah = self.ARCH_INNER_HEIGHT
         al = self.ARCH_LENGTH
         tag_type = self.tags[tag_id]
         if tag_type == 'ct':
-            z_des = -r
-        elif tag_type == 'cb':
             z_des = r
+        elif tag_type == 'cb':
+            z_des = -r
         elif tag_type == 'b':
-            z_des = bh/2
+            z_des = ((bh-self.BANNER_THICKNESS)/2)+ self.BANNER_THICKNESS
         elif tag_type == 'at':
-            z_des = ah/2
+            z_des = (ah/2) + self.ARCH_THICKNESS
         elif tag_type in ['cl', 'cr',  'al', 'ar']:
             z_des = 0
         vz = self.KP_Z * (self.z - z_des)
