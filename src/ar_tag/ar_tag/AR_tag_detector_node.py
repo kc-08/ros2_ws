@@ -1,8 +1,8 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
-from geometry_msgs.msg import PoseStamped, Point, Quaternion
-from std_msgs.msg import String
+from geometry_msgs.msg import PoseStamped, Point, Quaternion, Pose
+from std_msgs.msg import String, Header
 from cv_bridge import CvBridge
 import numpy as np
 import cv2
@@ -53,7 +53,8 @@ class ARTagDetector_Node(Node):
                 P_c_m__m = -1 * (R_c2m @ P_m_c__c)
                 P_c_m__m = P_c_m__m[:3]
                 pose_msg = PoseStamped()
-                pose_msg.position = Point(x= P_c_m__m[0][0]*2.6, y = P_c_m__m[1][0]*2.6, z = P_c_m__m[2][0]*2.6 )
+                pose_msg.pose = Pose()
+                pose_msg.pose.position = Point(x= P_c_m__m[0][0]*1.04, y = P_c_m__m[1][0]*1.04, z = P_c_m__m[2][0]*1.04)
                 tr = R_m2c.T[0,0] + R_m2c.T[1,1] + R_m2c.T[2,2]
                 if tr > 0:
                     w = 0.5 * np.sqrt(1+tr)
@@ -78,9 +79,9 @@ class ARTagDetector_Node(Node):
                     x = (R_m2c.T[0,2] + R_m2c.T[2,0])/S
                     y = (R_m2c.T[1,2] + R_m2c.T[2,1])/S
                     z = 0.25 * S
-                pose_msg.orientation = Quaternion(x = float(x), y = float(y), z = float(z), w = float(w))
-                pose_msg.header = String(id)
-                # self.id_pub.publish(id_num)
+                pose_msg.pose.orientation = Quaternion(x = float(x), y = float(y), z = float(z), w = float(w))
+                pose_msg.header = Header()
+                pose_msg.header.frame_id = str(id[0])
                 self.get_logger().info(f'Pose relative to ID {id}: {pose_msg}')
                 self.pose_pub.publish(pose_msg)
                 detected_tag_msg = self.bridge.cv2_to_imgmsg(img, encoding='bgr8')
