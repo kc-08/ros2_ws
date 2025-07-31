@@ -29,8 +29,8 @@ class ObstacleNode(Node):
         self.vel_pub = self.create_publisher(TrajectorySetpoint, '/velocity', qos_profile)
 
     def pose_callback(self,msg):
-        self.y = -msg.pose.position.x
-        self.z = -msg.pose.position.y
+        self.y = msg.pose.position.x
+        self.z = msg.pose.position.y
         self.x = msg.pose.position.z
         tag_id = int(msg.header.frame_id)
         r = self.CIRCLE_RADIUS
@@ -54,7 +54,7 @@ class ObstacleNode(Node):
         # msg.acceleration = [float('nan'), float('nan'), float('nan')]
         # msg.yaw = float('nan')
         # msg.yawspeed = float('nan')
-        msg.velocity = [0.0, 0.0, vz] #bu frame 
+        msg.velocity = [0.0, 0.0, vz] #bd frame 
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vel_pub.publish(msg)
         
