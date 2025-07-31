@@ -52,7 +52,7 @@ class ARTagDetector_Node(Node):
                 R_c2m = np.vstack([R_c2m, np.array([0.0, 0.0, 0.0, 1.0])])
                 P_c_m__m = -1 * (R_c2m @ P_m_c__c)
                 P_c_m__m = P_c_m__m[:3]
-                pose_msg = Pose()
+                pose_msg = PoseStamped()
                 pose_msg.position = Point(x= P_c_m__m[0][0]*2.6, y = P_c_m__m[1][0]*2.6, z = P_c_m__m[2][0]*2.6 )
                 tr = R_m2c.T[0,0] + R_m2c.T[1,1] + R_m2c.T[2,2]
                 if tr > 0:

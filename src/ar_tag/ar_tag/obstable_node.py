@@ -9,13 +9,15 @@ from px4_msgs.msg import TrajectorySetpoint
 
 class ObstacleNode(Node):
     def __init__(self):
+        super().__init__('Obstacle_avoider')
         #Constants
         self.CIRCLE_RADIUS = 0.5
         self.BANNER_HEIGHT = 0.5
         self.ARCH_HEIGHT = 0.5
         self.ARCH_LENGTH = 1.0
         self.KP_Z = 0.02
-        super().__init__('Obstacle_avoider')
+
+        #TEST VALUES NOT CORRECT
         self.tags = {98:'ct', 94: 'cl'} #ct = circle top; cb = circle bottom; cl = circle left; cr = circle right; b = banner; al = arch left; ar = arch left; at = arch top
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
@@ -23,15 +25,14 @@ class ObstacleNode(Node):
             history=HistoryPolicy.KEEP_LAST,
             depth=1
         )
-        # self.id_sub = self.create_subscription(Int32, '/camera/detected_tag_id', self.tag_callback, 10)
         self.pose_sub = self.create_subscription(PoseStamped, '/mavros/local_position/pose', self.pose_callback, 10)
         self.vel_pub = self.create_publisher(TrajectorySetpoint, '/velocity', qos_profile)
 
     def pose_callback(self,msg):
-        self.y = msg.x
-        self.z = msg.y
-        self.x = msg.z
-        tag_id = msg.header
+        self.y = msg.pose.position.x
+        self.z = msg.pose.position.y
+        self.x = msg.pose.position.z
+        tag_id = int(msg.header.frame_id)
         r = self.CIRCLE_RADIUS
         bh = self.BANNER_HEIGHT
         ah = self.ARCH_HEIGHT
@@ -49,11 +50,11 @@ class ObstacleNode(Node):
             z_des = 0
         vz = self.KP_Z * (self.z - z_des)
         msg = TrajectorySetpoint()
-        msg.position = [float('nan'), float('nan'), self.takeoff_height]
-        msg.acceleration = [float('nan'), float('nan'), float('nan')]
-        msg.yaw = float('nan')
-        msg.yawspeed = float('nan')
-        msg.velocity = [0.0, 0.0, vz]
+        # msg.position = [float('nan'), float('nan'), float('nan')]
+        # msg.acceleration = [float('nan'), float('nan'), float('nan')]
+        # msg.yaw = float('nan')
+        # msg.yawspeed = float('nan')
+        msg.velocity = [0.0, 0.0, vz] #bu frame 
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vel_pub.publish(msg)
         
