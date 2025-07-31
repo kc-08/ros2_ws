@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'tag_test_node = ar_tag.tag_test_node:main',
-            'obstacle_node = ar_tag.obstable_node:main',
+            'obstacle_node = ar_tag.obstacle_node:main',
             'AR_tag_detector_node = ar_tag.AR_tag_detector_node:main'
         ],
     },
